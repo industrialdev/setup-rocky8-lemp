@@ -21,7 +21,6 @@ sudo cp nginx.conf /etc/nginx/conf.d
 composer global require drush/drush
 echo 'export PATH=$HOME/.config/composer/vendor/bin:$PATH' >> ~/.bash_profile
 source ~/.bash_profile
-sudo ln -s /home/rocky/.composer/vendor/bin/drush /usr/local/bin
 sudo rpm -Uvh https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.4.0-x86_64.rpm
 yes | sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install ingest-attachment
 sudo systemctl enable elasticsearch && sudo systemctl start elasticsearch
