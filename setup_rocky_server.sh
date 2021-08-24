@@ -8,7 +8,7 @@ sudo rpm -Uvh http://nginx.org/packages/centos/8/x86_64/RPMS/nginx-1.20.1-1.el8.
 sudo yum -y module enable php:remi-8.0
 sudo yum install -y zip unzip git composer java-1.8.0-openjdk mariadb-server php php-fpm php-mysqlnd php-gd php-curl php-mbstring php-dom php-opcache php-soap policycoreutils-python-utils --enablerepo=remi
 sudo systemctl enable nginx && sudo systemctl start nginx && sudo systemctl enable mariadb && sudo systemctl start mariadb && sudo systemctl enable php-fpm && sudo systemctl start php-fpm
-mysqladmin -u root password root
+sudo mysqladmin -u root password root
 sudo sed -i "$ a [mariadb] \nmax_allowed_packet=900M" /etc/my.cnf
 sudo sed -i.bak s/'display_errors = Off'/'display_errors = On'/g /etc/php.ini
 sudo sed -i.bak s/'display_startup_errors = Off'/'display_startup_errors = On'/g /etc/php.ini
