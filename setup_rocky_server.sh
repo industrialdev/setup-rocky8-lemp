@@ -37,7 +37,7 @@ sudo chown -R rocky:rocky /srv/
 
 
 # based on https://github.com/MariaDB/server/blob/5.5/scripts/mysql_secure_installation.sh
-mysql -u root -proot <<EOF
+mariadb -u root -proot <<EOF
 ALTER USER 'root'@'localhost' IDENTIFIED BY 'root';
 DELETE FROM mysql.user WHERE User='';
 DELETE FROM mysql.user WHERE User='root' AND Host NOT IN ('localhost', '127.0.0.1', '::1');
