@@ -21,7 +21,7 @@ sudo sed -i.bak s/'\/run\/php-fpm\/www.sock'/'127.0.0.1:9000'/g /etc/php-fpm.d/w
 sudo rm /etc/nginx/conf.d/default.conf
 sudo cp nginx.conf /etc/nginx/conf.d
 composer global require drush/drush
-echo 'export PATH=$HOME/.config/composer/vendor/bin:$PATH' >> ~/.bash_profile
+echo 'export PATH=$HOME/.composer/vendor/bin:$PATH' >> ~/.bash_profile
 source ~/.bash_profile
 sudo rpm -Uvh https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.4.0-x86_64.rpm
 yes | sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install ingest-attachment
