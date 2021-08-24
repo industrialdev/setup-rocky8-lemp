@@ -13,6 +13,8 @@ sudo sed -i "$ a [mariadb] \nmax_allowed_packet=900M" /etc/my.cnf
 sudo sed -i.bak s/'display_errors = Off'/'display_errors = On'/g /etc/php.ini
 sudo sed -i.bak s/'display_startup_errors = Off'/'display_startup_errors = On'/g /etc/php.ini
 sudo sed -i.bak s/'memory_limit = 128M'/'memory_limit = 900M'/g /etc/php.ini
+sudo sed -i.bak s/'upload_max_filesize = 2M'/'upload_max_filesize = 100M'/g /etc/php.ini
+sudo sed -i.bak s/'post_max_size = 8M'/'post_max_size = 100M'/g /etc/php.ini
 sudo sed -i.bak s/'user = apache'/'user = rocky'/g /etc/php-fpm.d/www.conf
 sudo sed -i.bak s/'group = apache'/'group = rocky'/g /etc/php-fpm.d/www.conf
 sudo sed -i.bak s/'\/run\/php-fpm\/www.sock'/'127.0.0.1:9000'/g /etc/php-fpm.d/www.conf
