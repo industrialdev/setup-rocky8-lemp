@@ -4,8 +4,8 @@ sudo yum -y update
 sudo yum install -y epel-release
 sudo rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-8.rpm
 sudo cp mariadb.repo /etc/yum.repos.d
-sudo rpm -Uvh http://nginx.org/packages/centos/8/x86_64/RPMS/nginx-1.18.0-1.el8.ngx.x86_64.rpm
-sudo yum -y module enable php:remi-7.4
+sudo rpm -Uvh http://nginx.org/packages/centos/8/x86_64/RPMS/nginx-1.20.1-1.el8.ngx.x86_64.rpm
+sudo yum -y module enable php:remi-8.0
 sudo yum install -y zip unzip git composer java-1.8.0-openjdk mariadb-server php php-fpm php-mysqlnd php-gd php-curl php-mbstring php-dom php-opcache php-soap policycoreutils-python-utils --enablerepo=remi
 sudo systemctl enable nginx && sudo systemctl start nginx && sudo systemctl enable mariadb && sudo systemctl start mariadb && sudo systemctl enable php-fpm && sudo systemctl start php-fpm
 mysqladmin -u root password root
