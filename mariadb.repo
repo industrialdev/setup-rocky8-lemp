@@ -1,10 +1,10 @@
-# MariaDB 10.6 CentOS repository list
+# MariaDB 10.11 CentOS repository list
 # http://downloads.mariadb.org/mariadb/repositories/
 # https://serverfault.com/questions/1016837/why-isnt-repository-priority-working-in-yum-dnf-in-centos-8
 [mariadb]
 name = MariaDB
 enabled=1
-baseurl = http://yum.mariadb.org/10.6/centos8-amd64
+baseurl = http://mirror.mariadb.org/yum/11.0/centos/8/x86_64/
 module_hotfixes=1
 gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
 gpgcheck=1
