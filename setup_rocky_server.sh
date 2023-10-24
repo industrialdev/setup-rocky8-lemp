@@ -30,7 +30,6 @@ sudo semanage permissive -a httpd_t
 sudo firewall-cmd --permanent --add-port=80/tcp
 sudo firewall-cmd --permanent --add-port=443/tcp
 sudo firewall-cmd --reload
-sudo cp /usr/share/zoneinfo/America/New_York /etc/localtime
 sudo systemctl restart nginx && sudo systemctl restart mariadb && sudo systemctl restart php-fpm
 sudo chown -R rocky:rocky /srv/
 
